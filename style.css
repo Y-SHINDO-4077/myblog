@@ -1,0 +1,256 @@
+/*
+Theme Name: myblog
+Theme URI: http://wordpress.org/themes/myblog
+Author: どぅー
+Author URI: http://wordpress.org/
+Description: どぅーのスタイル
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: black, brown, orange, tan, white, yellow, light, one-column, two-columns, right-sidebar, flexible-width, custom-header, custom-menu, editor-style, featured-images, microformats, post-formats, rtl-language-support, sticky-post, translation-ready
+
+*/
+/*google font apis */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Fjalla+One&display=swap');
+
+
+body {
+  background-color: #f6f6f6;
+}
+
+.img{
+  display:inline-block;
+  max-width:100%;
+  height:auto;
+}
+.img_top img{
+max-width:100%;
+height: auto;
+display: inline-block;
+}
+
+.main {
+  width: 1200px;
+  margin: 0 auto;
+  background-color: #fff;
+  text-align: center;
+}
+
+.title {
+  font-family: 'Dancing Script', cursive;
+  font-size:54px;
+  padding-top:10px;
+  margin-bottom:30px;
+}
+
+.post_title{
+  font-family: 'Fjalla One', sans-serif;
+  text-align:center;
+  display:inline-block;/*文字サイズ*/
+  border-bottom: 1px solid #000;
+}
+.grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+  gap:5px;
+  margin-left:5px;
+}
+.contents {
+  text-align: center;
+}
+.post-categories{
+  list-style-type:none;
+  text-align:left;
+}
+
+.post-categories a{
+  text-decoration: none;
+  color:black;
+}
+
+/*single.php 右側にサイドバーを追加 */
+.single_content{
+  display:flex;
+  justify-content: space-between;
+}
+article{
+  width: 800px;
+  margin: 0 auto;
+  background-color: #fff;
+  text-align: center;
+}
+aside{
+  width: 400px;
+  margin: 0 auto;
+  background-color: #fff;
+  text-align: center;
+}
+aside li {
+  list-style-type:none;
+}
+aside li a{
+  text-decoration: none;
+  color:black;
+}
+/*single-slug.php カテゴリ名・投稿タイプ名・本文サイズ*/
+
+.post-categories li a{
+  margin-left:60px;
+}
+.content-single{
+  text-align:left;
+  margin-left:100px;
+}
+.post_type_name{
+  text-align:left;
+  margin-left:100px;
+}
+.date{
+  text-align:right;
+}
+.info{
+  font-weight: bold;
+}
+.table_SCF{
+  display:flex;
+}
+/*single-read_books.php */
+.post_type_name a{
+  text-decoration: none;
+  color:black;
+}
+table{
+  margin-left:300px;
+  border: 1px solid black;
+}
+td{
+  border: 1px solid black;
+}
+.tit{
+  background-color: #f6f6f6;
+  width:40%;
+}
+
+/*パンくずリスト */
+.bread {
+  text-align: left;
+  margin-left:60px;
+}
+.bread ul{
+  list-style: none;
+  font-size: .8em;
+}
+.bread li{
+  display: inline;
+}
+.bread li a{
+  color: inherit;
+  text-decoration: none;
+}
+.bread li + li:before{
+  content: ">";
+  margin-right:.3em;
+}
+/*フッター */
+.siteFooter li {
+  list-style-type:none;
+}
+.siteFooter li a{
+  text-decoration: none;
+  color:black;
+}
+
+/*ナビゲーションメニュー */
+.nav{
+  width:1000px;
+  display:inline-block;
+  margin-bottom:40px;
+}
+.nav ul{
+  display:flex;
+  flex-direction:row;
+  justify-content: space-around;
+  border-top: 1px solid #b4c1d1;
+  border-bottom: 1px solid #b4c1d1;
+}
+.nav li {
+  list-style-type:none;
+}
+.nav a {
+  text-decoration: none;
+  color:black;
+  font-size:16px;
+}
+.navbutton{
+  display:none;
+}
+.title-menu{
+  display:none;
+}
+/*サイドバー */
+#secondary{
+  text-align: left;
+  margin-left:100px;
+  font-style:italic;
+}
+#secondary ul li a{
+  font-style:normal;
+  border-bottom: 1px solid #b4c1d1;
+}
+
+/*フッター */
+.siteFooter{
+  background-color: #f6f6f6;
+}
+
+/*レスポンシブ対応 */
+@media only screen and (max-width:767px) {
+  .main{
+    max-width:100%;
+    height:auto;
+  }
+  .bread {
+    text-align: left;
+    margin-left:0px;
+  }
+  .post-categories li a{
+    margin-left:0;
+  }
+  .content-single{
+
+    margin-left:0;
+  }
+  .post_type_name{
+    margin-left:0;
+  }
+  table{
+    margin-left:100px;
+  }
+  .nav{
+    display:inline-block;
+    max-width:80%;
+  }
+  .nav ul{
+    display:inline-block;
+    border-top: 1px solid #b4c1d1;
+    border-bottom: 1px solid #b4c1d1;
+    padding-left:0;
+  }
+  .header-inner{
+    position:relative;
+  }
+  .title-menu{
+    display:inline-block;
+  }
+  .navbutton{
+    display:block;
+    position:absolute;
+    z-index:100;
+    opacity: 0.5;
+  }
+
+  #secondary{
+    display:none;
+  }
+
+}
